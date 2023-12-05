@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Nota</title>
+</head>
+<body>
+    <h1>Editar Notas</h1>
+    <form action="/editar/<%= evento._id %>" method="POST">
+        <label for="fechaHoy">Fecha de Hoy:</label>
+        <input type="text" name="fechaHoy" value="<%= evento.fechaHoy %>" required>
+        <label for="fechaEvento">Fecha del Evento:</label>
+        <input type="text" name="fechaEvento" value="<%= evento.fechaEvento %>" required>
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" value="<%= evento.titulo %>" required>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" required><%= evento.descripcion %></textarea>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+</html>
